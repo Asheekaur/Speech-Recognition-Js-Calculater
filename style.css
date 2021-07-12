@@ -3,3 +3,14 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+.container {
+    width: 23vw;
+    height: 87.7vh;
+    overflow: hidden;
+    background: rgb(43, 48, 58);
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 10px black;
+  }
