@@ -1,16 +1,33 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .container {
-    width: 23vw;
-    height: 87.7vh;
-    overflow: hidden;
-    background: rgb(43, 48, 58);
-    margin: auto;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 1.5rem;
-    box-shadow: 0px 0px 10px black;
-  }
+  width: 23vw;
+  height: 87.7vh;
+  overflow: hidden;
+  background: rgb(43, 48, 58);
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0px 0px 10px black;
+}
+
+/* mic section  */
+
+.mic-icon {
+  margin: 1.3rem 0rem 0rem 1.3rem;
+}
+.icon {
+  width: 2.5rem;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+.icon:hover {
+  background-color: rgb(122, 126, 134);
+  border-radius: 1.5rem;
+}
+
+/* end of mic section */
