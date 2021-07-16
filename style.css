@@ -31,3 +31,37 @@ body {
 }
 
 /* end of mic section */
+
+
+/* display section */
+
+.display {
+  height: 23.7%;
+  width: 99.9%;
+  text-align: right;
+  font-size: 2rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  position: relative;
+}
+.display-1 {
+  opacity: 0.4;
+  font-size: 1.5rem;
+  height: 1rem;
+  padding-right: 2rem;
+  color: aliceblue;
+}
+.display-2 {
+  padding-top: 3rem;
+  padding-right: 2rem;
+  color: rgb(225, 232, 238);
+}
+.temp-result {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 1.8rem;
+  font-size: 1.5rem;
+  opacity: 0.3;
+  color: aliceblue;
+}
+
+/* end of display section */
