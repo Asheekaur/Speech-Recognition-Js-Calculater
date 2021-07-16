@@ -4,8 +4,8 @@ body {
   box-sizing: border-box;
 }
 .container {
-  width: 18rem;
-  height: 33rem;
+  width: 19rem;
+  height: 34rem;
   background: rgb(43, 48, 58);
   margin: .5rem auto auto auto;
   border-radius: 1.5rem;
@@ -75,7 +75,7 @@ body {
 }
 .button {
   border: 0.8px solid rgb(44, 51, 68);
-  height: 3.2rem;
+  height: 3.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
