@@ -9,7 +9,7 @@ const clearLast = document.querySelector(".last-entity-clear");
 
 let dis1Num = "";
 let dis2Num = "";
-let result =  null;
+let result = null;
 let lastOperation = "";
 let haveDot = false;
 
@@ -39,24 +39,50 @@ operations.forEach(operation => {
             result = parseFloat(dis2Num);
         }
         clearVar(operationName);
-        lastOperation = operationName ;
+        lastOperation = operationName;
         console.log(dis2Num);
     })
 });
 
+function clearVar(name = "") {
+    dis1Num += dis2Num + " " + name + " ";
+    display1Element.innerText = dis1Num;
+    display2Element.innerText = " ";
+    dis2Num = " ";
+    tempResult.innerText = result;
+}
 
-equal.addEventListener("click",e=>{
-    if(!dis1Num || !dis2Num) return ;
+function mathOperation() {
+    if (lastOperation === "x") {
+        result = parseFloat(result) * parseFloat(dis2Num);
+    }
+    else if (lastOperation === "+") {
+        result = parseFloat(result) + parseFloat(dis2Num);
+    }
+    else if (lastOperation === "-") {
+        result = parseFloat(result) - parseFloat(dis2Num);
+    }
+    else if (lastOperation === "/") {
+        result = parseFloat(result) / parseFloat(dis2Num);
+    }
+    else if (lastOperation === "%") {
+        result = parseFloat(result) % parseFloat(dis2Num);
+    }
+
+}
+
+equal.addEventListener("click", e => {
+    if (!dis1Num || !dis2Num) return;
     haveDot = false;
     mathOperation();
     clearVar();
     display2Element.innerText = result;
     tempResult.innerText = "";
-    dis2Num = result ;
+    dis2Num = result;
     dis1Num = "";
 })
 
-clear.addEventListener("click",e=>{
+clear.addEventListener("click", e => {
     display1Element.innerText = "0";
     display2Element.innerText = "0";
     dis1Num = "";
@@ -65,7 +91,7 @@ clear.addEventListener("click",e=>{
     tempResult.innerText = "0";
 })
 
-clearLast.addEventListener("click",e=>{
+clearLast.addEventListener("click", e => {
     display2Element.innerText = "";
     dis2Num = "";
 })
