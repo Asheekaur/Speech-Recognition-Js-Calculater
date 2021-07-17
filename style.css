@@ -5,7 +5,7 @@ body {
 }
 .container {
   width: 19rem;
-  height: 34rem;
+  height: 35rem;
   background: rgb(43, 48, 58);
   margin: .5rem auto auto auto;
   border-radius: 1.5rem;
@@ -21,6 +21,7 @@ body {
 .icon {
   width: 1.8rem;
   cursor: pointer;
+  padding: .3rem;
 }
 .icon:hover {
   background-color: rgb(122, 126, 134);
