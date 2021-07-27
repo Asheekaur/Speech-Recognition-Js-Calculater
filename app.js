@@ -138,12 +138,12 @@ function clickEqual() {
 // Through microphone
 let microphone = document.querySelector(".icon");
 let results = document.getElementById("result");
+microphone.classList.remove("anim");
 microphone.onclick = function () {
     display1Element.style.display = "none";
     tempResult.style.display = "none";
-    microphone.classList.add("record");
+    microphone.classList.add("anim");
     let recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
-    recognition.lang = "en-US";
     recognition.start();
     operation = {
         "plus": "+",
@@ -156,7 +156,6 @@ microphone.onclick = function () {
     }
     recognition.onresult = function (event) {
         let input = event.results[0][0].transcript;
-        console.log(input);
         for (property in operation) {
             input = input.replace(property, operation[property]);
         }
@@ -164,7 +163,7 @@ microphone.onclick = function () {
         setTimeout(function () {
             evaluate(input);
         }, 2000);
-        microphone.classList.remove("record");
+        microphone.classList.remove("anim");
     }
 }
 function evaluate(input) {
@@ -173,7 +172,7 @@ function evaluate(input) {
         display2Element.innerText = result;
     }
     catch (e) {
-        alert("It's not a mathematical");
+        display2Element.innerText = "";
     }
     display1Element.style.display = "block";
     tempResult.style.display = "block";

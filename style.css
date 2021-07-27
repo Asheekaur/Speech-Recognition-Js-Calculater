@@ -7,7 +7,7 @@ body {
   width: 19rem;
   height: 35rem;
   background: rgb(43, 48, 58);
-  margin: .5rem auto auto auto;
+  margin: 1.2rem auto auto auto;
   border-radius: 1.5rem;
   box-shadow: 0px 0px 10px black;
   overflow: hidden;
@@ -18,22 +18,35 @@ body {
 .mic-icon {
   padding: 1rem 0rem 0rem 1rem;
 }
+.anim{
+  animation: microphone-anim 1.5s infinite;
+}
+@keyframes microphone-anim{
+  0%{
+    transform: scale(0.9);
+  }
+  70%{
+    transform: scale(1);
+    box-shadow: 0 0 0 7px rgba(189, 224, 248, 0.4);
+  }
+  100%{
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(189, 224, 248, 0.4);
+  }
+}
 .icon {
   width: 1.8rem;
   cursor: pointer;
-  padding: .3rem;
-}
-.icon:hover {
-  background-color: rgb(122, 126, 134);
+  padding: .2rem;
+  background-color: rgb(234, 235, 238);
   border-radius: 1.5rem;
 }
-
 /* end of mic section */
 
 /* display section */
 
 .display {
-  height: 25%;
+  height: 25.5%;
   width: 99.9%;
   text-align: right;
   font-size: 1.9rem;
@@ -67,7 +80,7 @@ body {
 
 .all-buttons {
   background: rgb(62, 62, 77);
-  color: rgb(182, 187, 216);
+  color: rgb(212, 215, 236);
   display: grid;
   grid-template: repeat(4, 1fr) / repeat(4, 1fr);
   grid-gap: 0.6rem;
@@ -87,7 +100,8 @@ body {
 }
 .button:hover {
   background-color: rgb(107, 112, 121);
-  color: rgb(230, 231, 245);
+  color: rgb(244, 244, 248);
+  font-size: 1.1rem;
 }
 .btn-0 {
   grid-column: 1/3;
